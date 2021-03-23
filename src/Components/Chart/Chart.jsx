@@ -24,7 +24,7 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
             datasets: [{
                 data: dailyData.map(({confirmed}) => confirmed),
                 label: 'Infected',
-                borderColor: '#3333ff',
+                borderColor: '#0C2340',
                 fill: true
 
             },{
@@ -38,7 +38,6 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
         height={500}
         options={{
             maintainAspectRatio: false,
-
         }}
             
         />) : null
@@ -52,7 +51,7 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
                     labels: ['Infected', 'Recovered', 'Deaths'],
                     datasets: [{
                         label: 'People',
-                        backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+                        backgroundColor: ['#0C2340', '#FFC72C', 'red'],
                         data: [confirmed.value, recovered.value, deaths.value]
                     }]
                 }}
